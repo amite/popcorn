@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We're going to build a movie trailer site called "Popcorn".
 
-Things you may want to cover:
+Popcorn will be a site where users can come and explore new movies.
 
-* Ruby version
+All of the movies and data you see here are populated by the Youtube API.
 
-* System dependencies
+We're going to learn how to build every component of this app.
 
-* Configuration
+I'll show you
 
-* Database creation
+--> how we make API requests to Youtube to get this data
+--> how we can load different movies with different charts
+--> how we use the Angular router to create different pages in our application
 
-* Database initialization
+We're going to be creating a login system, too. So user's can sign up, they can pick favorite movies and pick a video and watch the trailer.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+We'll even have a protected user profile page where a user can view the private list of their favorite videos.
