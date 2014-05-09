@@ -17,6 +17,11 @@ App.config(function($routeProvider, $locationProvider) {
             controller: 'LoginController',
             templateUrl: '/templates/login.html'
         })
+        .when('/user/:user_id',
+        {
+            controller: 'ProfileController',
+            templateUrl: '/templates/profile.html'
+        })
         .when('/movie/:movie_id',
         {
             controller: 'MovieController',
