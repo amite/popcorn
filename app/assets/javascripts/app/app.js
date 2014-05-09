@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var App = angular.module('popcornApp',['ngRoute']);
+var App = angular.module('popcornApp',['ngRoute','ngCookies']);
 
 App.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -11,6 +11,11 @@ App.config(function($routeProvider, $locationProvider) {
         {
             controller: 'MoviesController',
             templateUrl: '/templates/movies.html'
+        })
+        .when('/login',
+        {
+            controller: 'LoginController',
+            templateUrl: '/templates/login.html'
         })
         .when('/movie/:movie_id',
         {
