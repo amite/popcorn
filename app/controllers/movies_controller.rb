@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
 
     if @movie.save
-      render status: :create, json: @movie.as_json
+      render status: :ok, json: @movie.as_json
     else
       render status: :unprocessable_entity,  json: @movie.errors.as_json
     end

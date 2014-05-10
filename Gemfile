@@ -36,6 +36,7 @@ gem 'bootstrap-sass'
 gem 'angularjs-rails'
 gem 'underscore-rails'
 gem 'devise'
+gem 'angularjs-rails-resource', '~> 1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
