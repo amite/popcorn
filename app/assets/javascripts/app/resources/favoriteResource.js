@@ -17,6 +17,21 @@ App.factory('Favorite',
             return favorite.save();
         };
 
+        resource.isFavorite = function(user,movie){
+            var favorite = resource.query({
+                user_id: user.id,
+                movie_id: movie.id
+            });
+
+            return favorite.then(function(results){
+                if(results.length > 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+        };
+
 
         resource.removeFavorite = function(user, movie) {
             var favorite = resource.query({
