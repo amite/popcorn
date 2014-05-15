@@ -33,6 +33,7 @@ end
 
 
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 gem 'angularjs-rails'
 gem 'underscore-rails'
 gem 'devise'

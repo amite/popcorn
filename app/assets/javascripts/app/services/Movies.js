@@ -2,7 +2,7 @@
  * Created by pranavaswaroop on 8/05/2014.
  */
 
-App.service('MoviesService',function($http, $q){
+App.service('MoviesService',function($http, $q, Movie){
     this.movies = function(){
        var d = $q.defer();
        $http({
@@ -22,8 +22,15 @@ App.service('MoviesService',function($http, $q){
                     description: movie['media$group']['media$description']['$t']
                 };
            });
-           console.log(movies);
-           d.resolve(movies);
+
+           var moviePromises = _.map(movies, function(movieData) {
+               var youtubeId = movieData.youtubeId;
+               return Movie.findOrCreateByYoutubeId(youtubeId, movieData);
+           });
+
+           $q.all(moviePromises).then(function(movieResources){
+               d.resolve(movieResources);
+           });
        },function(error){
            d.reject(error);
        });

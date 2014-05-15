@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new(favorite_params)
 
     if @favorite.save
-      render status: :created,
+      render status: :ok,
              json: @favorite.as_json
     else
       render status: :unprocessable_entity,
@@ -29,7 +29,7 @@ class FavoritesController < ApplicationController
 
   def show
     @favorite =
-        Favorite.where(:youtube_id => params[:id]).first ||
+        Favorite.where(:movie_id => params[:id]).first ||
             Favorite.where(:id => params[:id]).first
 
     if @favorite
