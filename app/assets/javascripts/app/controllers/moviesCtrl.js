@@ -5,10 +5,18 @@
 App.controller("MoviesController",function($scope, MoviesService, UserService, Favorite){
     $scope.loading = true;
     $scope.complete = false;
-    MoviesService.movies().then(function(movies){
-        $scope.loading = false;
-        $scope.complete = true;
-        $scope.movies = movies;
+
+
+    $scope.$watch('chart',function(newValue){
+       if(newValue){
+           MoviesService.movies(newValue).then(function(movies){
+               $scope.loading = false;
+               $scope.complete = true;
+               $scope.movies = movies;
+           });
+       }
     });
+
+    $scope.chart = "most_popular";
 
 });
