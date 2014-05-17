@@ -39,6 +39,10 @@ gem 'underscore-rails'
 gem 'devise'
 gem 'angularjs-rails-resource', '~> 1.0.0'
 
+# Debug
+gem 'pry-rails'
+gem 'pry-debugger'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
