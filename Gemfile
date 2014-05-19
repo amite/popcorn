@@ -38,7 +38,7 @@ gem 'angularjs-rails'
 gem 'underscore-rails'
 gem 'devise'
 gem 'angularjs-rails-resource', '~> 1.0.0'
-
+gem 'ngmin-rails'
 # Debug
 # gem 'pry-rails'
 # gem 'pry-debugger'
