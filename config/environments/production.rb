@@ -23,8 +23,9 @@ Popcorn::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.compress = false
+  config.assets.js_compressor = Uglifier.new(:mangle => false, :compress => false)
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false

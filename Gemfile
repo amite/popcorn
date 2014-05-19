@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
@@ -40,8 +40,8 @@ gem 'devise'
 gem 'angularjs-rails-resource', '~> 1.0.0'
 
 # Debug
-gem 'pry-rails'
-gem 'pry-debugger'
+# gem 'pry-rails'
+# gem 'pry-debugger'
 
 
 gem 'rails_12factor', group: :production
