@@ -3,6 +3,8 @@
  */
 'use strict';
 
+
+var x = 2;
 var App = angular.module('popcornApp',['ngRoute','ngCookies','ngResource','rails']);
 
 App.config(function($routeProvider, $locationProvider) {
